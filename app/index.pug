@@ -1,0 +1,37 @@
+extends ./_layout.pug
+block append title
+  title 高雄旅遊資訊
+
+block append content
+  .wrapper#top
+    .header
+      h1 高雄旅遊資訊
+      .select-box
+        input#placeholder(type='radio', name='city')
+        label.list-btn.placeholder(for='placeholder')
+        span.list-arrow
+        ul.select-wrap
+        .overlay
+    .container
+      .tags-box
+        h2 熱門行政區
+        .tags
+          button._purple(value='岡山區') 岡山區
+          button._orange(value='三民區') 三民區
+          button._yellow(value='美濃區') 美濃區
+          button._blue(value='田寮區') 田寮區
+      .scroll-line
+        span.material-icons play_circle_outline
+      .card-wrap
+        .card-title 高雄全區
+        .page-list
+        ul.card-box
+      #scroll-top
+        i.material-icons expand_less
+        i.material-icons expand_less
+    .footer
+      h3 高雄旅遊網
+      | 資料來源：
+      a(href="https://data.kcg.gov.tw/", target="_blank") 高雄市政府資料開放
+      | &nbsp;|&nbsp;
+      a(href="https://github.com/hexschool/KCGTravel", target="_blank") 六角學院

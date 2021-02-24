@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <title>高雄旅遊資訊</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta content="width=device-width initial-scale=1 minimum-scale=1.0 maximum-scale=1.0 user-scalable=0" name="viewport">
+    <meta http-equiv="X-UA-Compatible" content="IE=10,chrome=1">
+    <base href="./">
+    <link rel="stylesheet" href="./assets/css/style.css">
+  </head>
+  <body>
+    <!--container-->
+    <div class="wrapper" id="top">
+      <div class="header">
+        <h1>高雄旅遊資訊</h1>
+        <div class="select-box">
+          <input id="placeholder" type="radio" name="city">
+          <label class="list-btn placeholder" for="placeholder"></label><span class="list-arrow"></span>
+          <ul class="select-wrap"></ul>
+          <div class="overlay"></div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="tags-box">
+          <h2>熱門行政區</h2>
+          <div class="tags">
+            <button class="_purple" value="岡山區">岡山區</button>
+            <button class="_orange" value="三民區">三民區</button>
+            <button class="_yellow" value="美濃區">美濃區</button>
+            <button class="_blue" value="田寮區">田寮區</button>
+          </div>
+        </div>
+        <div class="scroll-line"><span class="material-icons">play_circle_outline</span></div>
+        <div class="card-wrap">
+          <div class="card-title">高雄全區</div>
+          <div class="page-list"></div>
+          <ul class="card-box"></ul>
+        </div>
+        <div id="scroll-top"><i class="material-icons">expand_less</i><i class="material-icons">expand_less</i></div>
+      </div>
+      <div class="footer">
+        <h3>高雄旅遊網</h3>資料來源：<a href="https://data.kcg.gov.tw/" target="_blank">高雄市政府資料開放</a>&nbsp;|&nbsp;<a href="https://github.com/hexschool/KCGTravel" target="_blank">六角學院</a>
+      </div>
+    </div>
+    <script src="./assets/scripts/vendors.js"></script>
+    <script src="./assets/scripts/all.js"></script>
+  </body>
+</html>

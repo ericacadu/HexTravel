@@ -1,0 +1,92 @@
+.select-box {
+  width: 450px;
+  position: relative;
+  margin: 50px auto 0;
+  z-index: 9; }
+  .select-box::after {
+    content: '';
+    display: block;
+    width: calc(100% - 4px);
+    height: 46px;
+    border: 2px solid #FFFFFF;
+    border-radius: 3px;
+    left: 50%;
+    position: absolute;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+    top: -2px; }
+  .select-box input {
+    display: none; }
+  .select-box .list-btn {
+    width: 100%;
+    height: 46px;
+    top: 0;
+    left: 0;
+    position: absolute;
+    display: block;
+    z-index: 2;
+    cursor: pointer; }
+  .select-box .select-wrap {
+    -webkit-box-shadow: 0 1px 10px rgba(68, 68, 68, 0.3);
+            box-shadow: 0 1px 10px rgba(68, 68, 68, 0.3);
+    position: relative;
+    z-index: 3; }
+  .select-box .select-option, .select-box .placeholder {
+    width: 100%;
+    position: relative;
+    padding: 0 10px;
+    display: block;
+    z-index: 1;
+    line-height: 46px;
+    cursor: pointer;
+    background: #FFFFFF;
+    display: none;
+    -webkit-transition: all 0.1s linear;
+    -o-transition: all 0.1s linear;
+    transition: all 0.1s linear; }
+  .select-box .list-arrow {
+    display: inline-block;
+    z-index: 1.6;
+    pointer-events: none;
+    z-index: 9;
+    top: 21px;
+    right: 15px;
+    position: absolute;
+    display: block;
+    height: 0;
+    width: 0;
+    border-top: 10px solid #444444;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+    -webkit-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear; }
+  .select-box .placeholder {
+    display: block;
+    background: rgba(255, 255, 255, 0.7); }
+  .select-box .overlay {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 1; }
+  .select-box input[type="radio"]:not(:checked) + .select-option:hover {
+    background: #EEEEEE; }
+  .select-box #placeholder:checked + .placeholder {
+    margin-bottom: 10px;
+    background: #FFFFFF; }
+  .select-box #placeholder:checked ~ .list-arrow {
+    -webkit-transform: translateY(-2px) scaleY(-1);
+        -ms-transform: translateY(-2px) scaleY(-1);
+            transform: translateY(-2px) scaleY(-1); }
+  .select-box #placeholder:checked ~ .select-wrap {
+    max-height: 460px;
+    overflow-y: scroll; }
+    .select-box #placeholder:checked ~ .select-wrap .select-option {
+      display: block; }
+  .select-box #placeholder:checked ~ .overlay {
+    display: block; }

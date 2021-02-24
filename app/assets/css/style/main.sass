@@ -1,0 +1,209 @@
+@import '../mixins/mixins'
+*
+	// outline: 1px solid red
+
+body
+	background: $bgColor
+	color: $dark
+	min-width: 640px
+	.wrapper
+		max-width: 1024px
+		+margin(0 auto)
+.header
+	background: url(../../images/main_bg.png) no-repeat 50% 0
+	background-size: 1024px auto
+	+padding(top 90px)
+	+size(auto, calc(350px - 90px))
+	h1
+		color: $light
+		text-align: center
+		font-size: 30px
+		letter-spacing: 2px
+
+.container
+	+margin(top -30px)
+	min-height: calc(100vh - 350px - 96px)
+
+.tags-box
+	background: $light
+	+size(620px)
+	+margin(0 auto)
+	+padding(20px 50px)
+	+border-radius(3px)
+	+box-shadow(0, 1px, 3px, rgba($dark, .2))
+	h2
+		font-size: 18px
+		letter-spacing: 1px
+	.tags
+		+flex(space-between)
+		+margin(top 15px)
+		button
+			+size(130px)
+			line-height: 42px
+			text-align: center
+			color: $light
+			font-size: 16px
+			border: 0
+			cursor: pointer
+			+border-radius(5px)
+			+transition(all, .15s)
+			&:hover
+				+opacity(.8)
+
+._purple
+	+bgColors($color1)
+._orange
+	+bgColors($color2)
+._yellow
+	+bgColors($secondColor)
+._blue
+	+bgColors($mainColor)
+
+.scroll-line
+	+size(90%, 1px)
+	+relative(0)
+	+margin(40px auto)
+	background: url(../../images/icon_line.png) repeat-x 50% 50%
+	text-align: center
+	span
+		+absolute(top 50% left 50%)
+		font-size: 30px
+		color: $mainColor
+		background: $bgColor
+		cursor: default
+		+padding(5px)
+		+transform(translate(-50%, -50%) rotate(90deg))
+
+.card-wrap
+	+padding(0 20px)
+	.card-title
+		font-size: 28px
+		text-align: center
+		color: $color1
+		letter-spacing: 2px
+		+margin(bottom 30px)
+	.card-box
+		+flex(space-between)
+		flex-flow: row wrap
+	.card-item
+		+size(48.5%)
+		background: $light
+		+margin(bottom 30px)
+		+box-shadow(0, 1px, 3px, rgba($dark, .2))
+	.card-img
+		+size(auto, 160px)
+		+relative(0)
+		overflow: hidden
+		img
+			+size(100.1%)
+			+centeralign
+			+transform-origin(center)
+			+transition(all, .25s, ease-in)
+			z-index: 1
+		&:hover img
+			+transform(translate(-50%, -50%) scale(1.1))
+
+	.card-txt
+		+size(calc(100% - 20px))
+		+padding(10px)
+		color: $light
+		font-size: 18px
+		z-index: 2
+		+absolute(bottom 0)
+		+flex(space-between)
+		+text-shadow(0, 1px, 2px, rgba($dark, 1))
+		.zone
+			font-size: 15px
+	.card-cont
+		color: #000
+		font-size: 15px
+		+padding(10px)
+		+relative(0)
+		p
+			line-height: 2
+		a
+			color: #000
+		i
+			font-size: 20px
+			+margin(right 5px)
+			+transform(translateY(24%))
+		.ticketinfo
+			max-width: 182px
+			text-align: right
+			+absolute(right 10px bottom 10px)
+		.opentime i
+			color: $color1
+		.add i
+			color: #f5a623
+			font-size: 24px
+			+margin(0 3px 0 -2px)
+		.tel i
+			color: $mainColor
+		.ticketinfo i
+			color: $secondColor
+
+.page-list
+	+flex
+	text-align: center
+	+margin(bottom 40px)
+	a
+		+size(40px, 40px)
+		+flex
+		+padding(0)
+		font-size: 15px
+		cursor: pointer
+		border: 1px solid rgba($mainColor, .5)
+		background: rgba($light, .5)
+		color: #666
+		+transition(all, .15s)
+		& + a
+			border-left: 0
+		&.active, &:hover
+			color: $light
+			background: $mainColor
+		&.off
+			color: rgba($dark, .4)
+			background: $bgColor
+			border-color: rgba($dark, .2)
+			cursor: default
+		&:first-child
+			+size(60px)
+			+border-radius-separate(5px, 0, 5px, 0)
+		&:last-child
+			+size(60px)
+			+border-radius-separate(0, 5px, 0, 5px)
+
+.footer
+	background: $mainColor
+	color: $light
+	text-align: center
+	font-size: 14px
+	line-height: 2
+	+padding(20px 0)
+	+margin(top 30px)
+	a
+		color: $secondColor
+
+#scroll-top
+	+size(36px, 36px)
+	background: rgba($mainColor, .8)
+	text-align: center
+	z-index: 2
+	cursor: default
+	+margin(right -512px)
+	+opacity(0)
+	+fixed(bottom 195px right 50%)
+	+transition(all, .15s)
+	&:hover
+		background: $mainColor
+	i
+		display: block
+		color: $light
+		font-size: 25px
+		+margin(top -4px)
+		+centeralign
+		& + i
+			+margin(top 4px)
+	&.is-active
+		+opacity(1)
+		cursor: pointer
