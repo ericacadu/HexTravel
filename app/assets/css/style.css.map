@@ -1,0 +1,13 @@
+{
+    "version": 3,
+    "mappings": "AAAA,OAAO,CAAC,8DAAI;AAEZ,OAAO,CAAP,yEAAO;AACP,OAAO,CAAP,yEAAO;AACP,OAAO,CAAP,2EAAO",
+    "sources": [
+        "style.sass",
+        "mixins/_mixins.sass",
+        "mixins/_mixin.sass",
+        "mixins/_colors.sass",
+        "mixins/_breakpoint.sass"
+    ],
+    "names": [],
+    "file": "style.css"
+}

@@ -28,6 +28,7 @@
     "gulp-babel": "^8.0.0",
     "gulp-clean": "^0.4.0",
     "gulp-concat": "^2.6.1",
+    "gulp-eslint": "^6.0.0",
     "gulp-gh-pages": "^0.5.4",
     "gulp-if": "^2.0.2",
     "gulp-image": "^6.2.1",
@@ -45,6 +46,14 @@
   },
   "devDependencies": {
     "eslint": "^7.20.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-eslint-comments": "^3.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.3.1",
+    "eslint-plugin-standard": "^5.0.0",
     "pre-commit": "^1.2.2"
   },
   "browserslist": [
