@@ -1,15 +1,13 @@
 module.exports = {
   env: {
-    browser: true
-    // es2021: true
+    browser: true,
+    es2021: true
   },
   extends: [
-    'standard',
-    'prettier',
-    'plugin:eslint-comments/recommended'
+    'standard'
   ],
   parserOptions: {
-    ecmaVersion: 10
+    ecmaVersion: 12
   },
   rules: {
   }

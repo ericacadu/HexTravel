@@ -38,29 +38,19 @@ function babel () {
   return gulp.src(envOptions.javascript.src)
     .pipe($.sourcemaps.init())
     .pipe($.babel({
-      presets: [
-        [
-          '@babel/preset-env',
-          {
-            corejs: 3,
-            useBuiltIns: 'entry',
-            targets: 'defaults, not ie 11, not ie_mob 11'
-          }
-        ]
-      ]
+      presets: ['@babel/preset-env']
+      // presets: [
+      //   [
+      //     '@babel/preset-env',
+      //     {
+      //       corejs: 3,
+      //       useBuiltIns: 'entry',
+      //       targets: 'defaults, not ie 11, not ie_mob 11'
+      //     }
+      //   ]
+      // ]
     }))
     .pipe(strip())
-    .pipe($.eslint())
-    .pipe($.eslint.format())
-    .pipe($.eslint.failAfterError())
-    // .pipe($.prettier({
-    //   singleQuote: true,
-    //   trailingComma: 'all',
-    //   bracketSpacing: true,
-    //   semi: false,
-    //   tabWidth: 2,
-    //   arrowParens: 'always'
-    // }))
     .pipe($.concat(envOptions.javascript.concat))
     .pipe($.if(options.env === 'dev', $.sourcemaps.write('.')))
     .pipe(gulp.dest(envOptions.javascript.path))
