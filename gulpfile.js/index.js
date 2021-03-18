@@ -39,16 +39,6 @@ function babel () {
     .pipe($.sourcemaps.init())
     .pipe($.babel({
       presets: ['@babel/preset-env']
-      // presets: [
-      //   [
-      //     '@babel/preset-env',
-      //     {
-      //       corejs: 3,
-      //       useBuiltIns: 'entry',
-      //       targets: 'defaults, not ie 11, not ie_mob 11'
-      //     }
-      //   ]
-      // ]
     }))
     .pipe(strip())
     .pipe($.concat(envOptions.javascript.concat))

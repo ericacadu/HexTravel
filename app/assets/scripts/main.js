@@ -8,7 +8,6 @@ const cardTitle = getElemt('.card-title')
 const pageList = getElemt('.page-list')
 const scrollBtn = getElemt('#scroll-top')
 const overlay = getElemt('.overlay')
-
 let jsonData = []
 window.axios.get(api).then(res => {
   jsonData = res.data.result.records
@@ -107,13 +106,14 @@ function switchData (e) {
 // ----- 過濾分頁資料 ----- //
 function dataFilter (value) {
   const data = JSON.parse(JSON.stringify(jsonData))
-  const newData = data.filter((item, index, arry) => {
-    if (item.Zone === value) {
-      return arry.push(item)
+  let newData = []
+  data.filter(item => {
+    if (value === item.Zone) {
+      newData.push(item)
     } else if (value === '高雄全區') {
-      arry = jsonData
-      return arry
+      newData = jsonData
     }
+    return newData
   })
   placeholder.textContent = value
   cardTitle.textContent = value

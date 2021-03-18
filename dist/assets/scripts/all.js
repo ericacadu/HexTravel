@@ -103,13 +103,15 @@ function switchData(e) {
 
 function dataFilter(value) {
   var data = JSON.parse(JSON.stringify(jsonData));
-  var newData = data.filter(function (item, index, arry) {
-    if (item.Zone === value) {
-      return arry.push(item);
+  var newData = [];
+  data.filter(function (item) {
+    if (value === item.Zone) {
+      newData.push(item);
     } else if (value === '高雄全區') {
-      arry = jsonData;
-      return arry;
+      newData = jsonData;
     }
+
+    return newData;
   });
   placeholder.textContent = value;
   cardTitle.textContent = value;
